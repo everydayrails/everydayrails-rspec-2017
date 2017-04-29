@@ -1,19 +1,13 @@
-<p id="notice"><%= notice %></p>
+<h1><%= @project.name %></h1>
 
 <p>
-  <strong>Name:</strong>
-  <%= @project.name %>
+  <%= simple_format @project.description %>
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @project.description %>
+  Due: <%= @project.due_on %>
 </p>
 
-<p>
-  <strong>Due on:</strong>
-  <%= @project.due_on %>
-</p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<div>
+  <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-default" %>
+</div>

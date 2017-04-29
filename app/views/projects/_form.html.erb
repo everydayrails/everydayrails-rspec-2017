@@ -1,4 +1,4 @@
-<%= form_with(model: project, local: true) do |form| %>
+<%= form_with(model: project, local: true) do |f| %>
   <% if project.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
@@ -11,22 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :project_name %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :project_description %>
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :due_on %>
-    <%= form.date_select :due_on, id: :project_due_on %>
+  <div class="form-group">
+    <%= f.label :due_on %>
+    <%= f.date_select :due_on, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit class: "btn btn-primary" %>
+    <% cancel_path = (project.persisted? ? project_path(project) : projects_path) %>
+    <%= link_to "Cancel", cancel_path, class: "btn btn-danger", data: { confirm: "Are you sure?" } %>
   </div>
 <% end %>
