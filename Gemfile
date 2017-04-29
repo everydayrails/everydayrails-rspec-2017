@@ -31,3 +31,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap-sass'
 gem 'jquery-rails'
+gem 'devise', github: 'plataformatec/devise'
