@@ -1,2 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.completed {
+  text-decoration: line-through;
+}

@@ -16,9 +16,25 @@
 </p>
 
 <div>
+  <%= link_to 'Add Task', new_project_task_path(@project), class: "btn btn-default" %>
   <%= link_to 'Add Note', new_project_note_path(@project), class: "btn btn-default" %>
   <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-default" %>
 </div>
+
+<h2>Tasks</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @project.tasks %>
+  </tbody>
+</table>
 
 <h2>Notes</h2>
 
