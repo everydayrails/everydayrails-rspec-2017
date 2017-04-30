@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @note.message %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @note.project %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @note.user %>
+</p>
+
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %>

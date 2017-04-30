@@ -16,5 +16,12 @@
 </p>
 
 <div>
+  <%= link_to 'Add Note', new_project_note_path(@project), class: "btn btn-default" %>
   <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-default" %>
+</div>
+
+<h2>Notes</h2>
+
+<div class="list-group">
+  <%= render @project.notes %>
 </div>

@@ -1,0 +1,23 @@
+<%= form_with(model: [note.project, note], local: true) do |f| %>
+  <% if note.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(note.errors.count, "error") %> prohibited this note from being saved:</h2>
+
+      <ul>
+      <% note.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :message %>
+    <%= f.text_area :message, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit class: "btn btn-primary" %>
+    <%= link_to "Cancel", note.project, class: "btn btn-danger", data: { confirm: "Are you sure?" } %>
+  </div>
+<% end %>
