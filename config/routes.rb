@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :tasks
   devise_for :users, controllers: { registrations: 'registrations' }
 
@@ -13,6 +14,10 @@ Rails.application.routes.draw do
         post :toggle
       end
     end
+  end
+
+  namespace :api do
+    resources :projects#, only: [:index, :show, :create]
   end
 
   root "home#index"
