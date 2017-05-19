@@ -1,5 +1,10 @@
 <div class="note list-group-item">
   <%= simple_format note.message %>
+  <% if note.attachment.exists? %>
+    Attachment: <%= link_to note.attachment_file_name, note.attachment.url %>
+    (<%= note.attachment_content_type %>,
+    <%= number_to_human_size(note.attachment_file_size) %>)
+  <% end %>
   <div>
     <%= note.user_name %> |
     <%= time_ago_in_words(note.created_at) %> ago |

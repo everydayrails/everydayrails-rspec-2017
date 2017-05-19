@@ -1,4 +1,4 @@
-<%= form_with(model: [note.project, note], local: true) do |f| %>
+<%= form_with(model: [note.project, note], local: true, multipart: true) do |f| %>
   <% if note.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(note.errors.count, "error") %> prohibited this note from being saved:</h2>
@@ -14,6 +14,11 @@
   <div class="form-group">
     <%= f.label :message %>
     <%= f.text_area :message, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :attachment %>
+    <%= f.file_field :attachment, class: "form-control" %>
   </div>
 
   <div class="actions">
