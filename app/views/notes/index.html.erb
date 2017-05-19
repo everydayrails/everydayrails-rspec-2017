@@ -1,31 +1,5 @@
-<p id="notice"><%= notice %></p>
+<h1>Search results for <%= params[:term] %></h1>
 
-<h1>Notes</h1>
+<%= render @notes %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Message</th>
-      <th>Project</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @notes.each do |note| %>
-      <tr>
-        <td><%= note.message %></td>
-        <td><%= note.project %></td>
-        <td><%= note.user %></td>
-        <td><%= link_to 'Show', note %></td>
-        <td><%= link_to 'Edit', edit_note_path(note) %></td>
-        <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Note', new_note_path %>
+<%= link_to "Back to #{@project.name}", @project, class: "btn btn-primary" %>
