@@ -31,6 +31,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap-sass'
 gem 'jquery-rails'
-gem 'devise', github: 'plataformatec/devise'
+gem 'devise'
 gem 'gravatar_image_tag'
 gem 'paperclip'
