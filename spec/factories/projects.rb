@@ -5,6 +5,10 @@ FactoryGirl.define do
     due_on 1.week.from_now
     association :owner
 
+    trait :with_notes do
+      after(:create) { |project| create_list(:note, 5, project: project) }
+    end
+
     trait :due_yesterday do
       due_on 1.day.ago
     end
