@@ -21,6 +21,10 @@ FactoryGirl.define do
       due_on 1.day.from_now
     end
 
+    trait :invalid do
+      name nil
+    end
+
     # Factory inheritance examples ...
     #
     # factory :project_due_yesterday do

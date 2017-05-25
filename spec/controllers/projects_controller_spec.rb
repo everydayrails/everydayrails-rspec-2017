@@ -68,12 +68,24 @@ RSpec.describe ProjectsController, type: :controller do
         @user = FactoryGirl.create(:user)
       end
 
-      it "adds a project" do
-        project_params = FactoryGirl.attributes_for(:project)
-        sign_in @user
-        expect {
-          post :create, params: { project: project_params }
-        }.to change(@user.projects, :count).by(1)
+      context "with valid attributes" do
+        it "adds a project" do
+          project_params = FactoryGirl.attributes_for(:project)
+          sign_in @user
+          expect {
+            post :create, params: { project: project_params }
+          }.to change(@user.projects, :count).by(1)
+        end
+      end
+
+      context "with invalid attributes" do
+        it "does not add a project" do
+          project_params = FactoryGirl.attributes_for(:project, :invalid)
+          sign_in @user
+          expect {
+            post :create, params: { project: project_params }
+          }.to_not change(@user.projects, :count)
+        end
       end
     end
 
