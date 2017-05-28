@@ -42,7 +42,7 @@
     local: true, method: :get, class: "form-inline" do |f| %>
   <div class="form-group">
     <%= f.label :term %>
-    <%= f.search_field :term, class: "form-control" %>
+    <%= f.search_field :term, class: "form-control", id: :term %>
     <%= f.submit "Search Notes", class: "btn btn-default" %>
   </div>
 <% end %>
