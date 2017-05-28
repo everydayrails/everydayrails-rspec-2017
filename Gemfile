@@ -20,6 +20,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.14.0'
   gem 'selenium-webdriver'
+  gem 'launchy', '~> 2.4.3'
 end
 
 group :development do
