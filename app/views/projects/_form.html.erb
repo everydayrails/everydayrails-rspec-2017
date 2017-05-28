@@ -13,17 +13,17 @@
 
   <div class="form-group">
     <%= f.label :name %>
-    <%= f.text_field :name, class: "form-control" %>
+    <%= f.text_field :name, class: "form-control", id: :project_name %>
   </div>
 
   <div class="form-group">
     <%= f.label :description %>
-    <%= f.text_area :description, class: "form-control" %>
+    <%= f.text_area :description, class: "form-control", id: :project_description %>
   </div>
 
   <div class="form-group">
     <%= f.label :due_on %>
-    <%= f.date_select :due_on, class: "form-control" %>
+    <%= f.date_select :due_on, class: "form-control", id: :project_due_on %>
   </div>
 
   <div class="actions">
