@@ -20,6 +20,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.14.0'
   gem 'selenium-webdriver'
+  # Or use poltergeist and PhantomJS as an alternative to Selenium/Chrome
+  # gem 'poltergeist', '~> 1.15.0'
   gem 'launchy', '~> 2.4.3'
 end
 
