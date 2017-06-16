@@ -1,4 +1,4 @@
-<tr>
+<tr class="task">
   <td>
     <label id="<%= dom_id(task) %>" class="<%= task.completed? ? 'completed' : nil %>">
       <%= check_box_tag 'completed', task.id, task.completed,
@@ -6,18 +6,19 @@
             remote: true,
             url: toggle_project_task_path(task.project, task),
             method: :post
-          }
+          },
+          style: "font-size: 300%"
       %>
       <%= task.name %>
     </label>
   </td>
-  <td>
+  <td class="task-actions">
     <%= link_to 'Edit', edit_project_task_path(task.project, task),
         class: "btn btn-xs btn-default"
     %>
     <%= link_to 'Delete', [task.project, task], method: :delete,
         data: { confirm: 'Are you sure?' },
-        class: "btn btn-xs btn-danger"
+        class: "btn btn-default btn-xs"
     %>
   </td>
 </tr>

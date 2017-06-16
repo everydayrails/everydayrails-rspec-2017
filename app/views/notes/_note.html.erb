@@ -1,19 +1,24 @@
-<div class="note list-group-item">
-  <%= simple_format note.message %>
-  <% if note.attachment.exists? %>
-    Attachment: <%= link_to note.attachment_file_name, note.attachment.url %>
-    (<%= note.attachment_content_type %>,
-    <%= number_to_human_size(note.attachment_file_size) %>)
-  <% end %>
-  <div>
-    <%= note.user_name %> |
-    <%= time_ago_in_words(note.created_at) %> ago |
+<div class="note">
+  <h4>
+    <%= note.user_name %>,
+    <%= full_date(note.created_at) %>
     <%= link_to 'Edit', edit_project_note_path(note.project, note),
         class: "btn btn-default btn-xs"
     %>
     <%= link_to 'Delete', [note.project, note], method: :delete,
         data: { confirm: 'Are you sure?' },
-        class: "btn btn-danger btn-xs"
+        class: "btn btn-default btn-xs"
     %>
-  </div>
+  </h4>
+
+  <% if note.attachment.exists? %>
+    <div class="note-details">
+      <span class="glyphicon glyphicon-file"></span>
+      <%= link_to note.attachment_file_name, note.attachment.url %>
+      (<%= note.attachment_content_type %>,
+      <%= number_to_human_size(note.attachment_file_size) %>)
+    </div>
+  <% end %>
+
+  <%= simple_format note.message %>
 </div>
