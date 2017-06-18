@@ -24,3 +24,5 @@
 
 # Ignore uploads from Paperclip
 /public/system
+
+.ruby-version
