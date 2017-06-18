@@ -16,7 +16,7 @@
     <%= note.user_name %>,
     <%= full_date(note.created_at) %>
     <%= link_to 'Edit', edit_project_note_path(note.project, note),
-        class: "btn btn-default btn-xs"
+        class: "btn btn-default btn-xs btn-inline"
     %>
     <%= link_to 'Delete', [note.project, note], method: :delete,
         data: { confirm: 'Are you sure?' },
