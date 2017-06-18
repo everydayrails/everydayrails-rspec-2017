@@ -24,10 +24,29 @@ body {
   }
 }
 
-.note {
-  margin-bottom: 50px;
+.heading {
+  font-weight: normal;
 }
 
-.note-details {
-  font-weight: bold;
+.project-description {
+  font-size: 20px;
 }
+
+.note {
+  margin: 20px 0 30px;
+}
+
+.note-info, .note-details {
+  font-weight: normal;
+  font-size: 14px;
+  color: #666;
+}
+
+.divider {
+  margin: 40px 0;
+}
+
+.note-message {
+  font-size: 20px;
+}
+
