@@ -130,7 +130,8 @@ RSpec.describe ProjectsController, type: :controller do
       end
 
       it "does not update the project" do
-        project_params = FactoryGirl.attributes_for(:project)
+        project_params = FactoryGirl.attributes_for(:project,
+          name: "New Name")
         sign_in @user
         patch :update, params: { id: @project.id, project: project_params }
         expect(@project.reload.name).to eq "Same Old Name"
@@ -212,6 +213,12 @@ RSpec.describe ProjectsController, type: :controller do
       it "redirects to the sign-in page" do
         delete :destroy, params: { id: @project.id }
         expect(response).to redirect_to "/users/sign_in"
+      end
+
+      it "does not delete the project" do
+        expect {
+          delete :destroy, params: { id: @project.id }
+        }.to_not change(Project, :count)
       end
     end
   end
