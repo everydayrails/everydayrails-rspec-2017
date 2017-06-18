@@ -1,15 +1,7 @@
 <div class="note">
-  <h4>
-    <%= note.user_name %>,
-    <%= full_date(note.created_at) %>
-    <%= link_to 'Edit', edit_project_note_path(note.project, note),
-        class: "btn btn-default btn-xs"
-    %>
-    <%= link_to 'Delete', [note.project, note], method: :delete,
-        data: { confirm: 'Are you sure?' },
-        class: "btn btn-default btn-xs"
-    %>
-  </h4>
+  <div class="note-message">
+    <%= simple_format note.message %>
+  </div>
 
   <% if note.attachment.exists? %>
     <div class="note-details">
@@ -20,5 +12,15 @@
     </div>
   <% end %>
 
-  <%= simple_format note.message %>
+  <h4 class="note-info">
+    <%= note.user_name %>,
+    <%= full_date(note.created_at) %>
+    <%= link_to 'Edit', edit_project_note_path(note.project, note),
+        class: "btn btn-default btn-xs"
+    %>
+    <%= link_to 'Delete', [note.project, note], method: :delete,
+        data: { confirm: 'Are you sure?' },
+        class: "btn btn-default btn-xs"
+    %>
+  </h4>
 </div>
