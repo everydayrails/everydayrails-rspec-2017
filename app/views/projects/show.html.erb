@@ -60,9 +60,10 @@
   <div class="col-xs-12 col-md-6" style="text-align: right;">
     <%= form_with url: project_notes_path(@project),
         local: true, method: :get, class: "form-inline" do |f| %>
-      <div class="form-group">
+      <div class="form-group has-feedback">
         <%= f.label :term, class: "sr-only" %>
         <%= f.search_field :term, class: "form-control", id: :term, placeholder: "Search Notes" %>
+        <i class="glyphicon glyphicon-search form-control-feedback"></i>
         <%= f.submit "Search Notes", class: "btn btn-default sr-only" %>
       </div>
     <% end %>
