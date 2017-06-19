@@ -29,6 +29,6 @@
   <div class="actions">
     <%= f.submit class: "btn btn-primary" %>
     <% cancel_path = (project.persisted? ? project_path(project) : projects_path) %>
-    <%= link_to "Cancel", cancel_path, class: "btn btn-danger", data: { confirm: "Are you sure?" } %>
+    <%= link_to "Cancel", cancel_path, class: "btn btn-default", data: { confirm: "Are you sure?" } %>
   </div>
 <% end %>
