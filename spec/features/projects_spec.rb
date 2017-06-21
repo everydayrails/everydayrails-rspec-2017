@@ -3,12 +3,7 @@ require 'rails_helper'
 RSpec.feature "Projects", type: :feature do
   scenario "user creates a new project" do
     user = FactoryGirl.create(:user)
-
-    visit root_path
-    click_link "Sign in"
-    fill_in "Email", with: user.email
-    fill_in "Password", with: user.password
-    click_button "Log in"
+    sign_in_as user
 
     expect {
       click_link "New Project"
