@@ -21,7 +21,7 @@ RSpec.describe TasksController, type: :controller do
       new_task = { name: "New test task" }
       sign_in @user
       post :create, format: :json,
-        params: { project_id: @project.id, id: @task.id, task: new_task }
+        params: { project_id: @project.id, task: new_task }
       expect(response.content_type).to eq "application/json"
     end
 
@@ -30,7 +30,7 @@ RSpec.describe TasksController, type: :controller do
       sign_in @user
       expect {
         post :create, format: :json,
-          params: { project_id: @project.id, id: @task.id, task: new_task }
+          params: { project_id: @project.id, task: new_task }
       }.to change(@project.tasks, :count).by(1)
     end
 
@@ -39,7 +39,7 @@ RSpec.describe TasksController, type: :controller do
       # Don't sign in this time ...
       expect {
         post :create, format: :json,
-          params: { project_id: @project.id, id: @task.id, task: new_task }
+          params: { project_id: @project.id, task: new_task }
       }.to_not change(@project.tasks, :count)
       expect(response).to_not be_success
     end
