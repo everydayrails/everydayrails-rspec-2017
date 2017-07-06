@@ -1,27 +1,49 @@
 require 'rails_helper'
 
 RSpec.feature "Tasks", type: :feature do
-  scenario "user toggles a task", js: true do
-    user = FactoryGirl.create(:user)
-    project = FactoryGirl.create(:project,
+  let(:user) { FactoryGirl.create(:user) }
+  let(:project) {
+    FactoryGirl.create(:project,
       name: "RSpec tutorial",
       owner: user)
-    task = project.tasks.create!(name: "Finish RSpec tutorial")
-    # using our customer login helper:
-    # sign_in_as user
-    # or the one provided by Devise:
+  }
+  let!(:task) { project.tasks.create!(name: "Finish RSpec tutorial") }
+
+  scenario "user toggles a task", js: true do
     login_as user, scope: :user
+    go_to_project "RSpec tutorial"
+
+    complete_task "Finish RSpec tutorial"
+    expect_complete_task "Finish RSpec tutorial"
+
+    undo_complete_task "Finish RSpec tutorial"
+    expect_incomplete_task "Finish RSpec tutorial"
+  end
+
+  def go_to_project(name)
     visit root_path
+    click_link name
+  end
 
-    click_link "RSpec tutorial"
-    check "Finish RSpec tutorial"
+  def complete_task(name)
+    check name
+  end
 
-    expect(page).to have_css "label#task_#{task.id}.completed"
-    expect(task.reload).to be_completed
+  def undo_complete_task(name)
+    uncheck name
+  end
 
-    uncheck "Finish RSpec tutorial"
+  def expect_complete_task(name)
+    aggregate_failures do
+      expect(page).to have_css "label.completed", text: name
+      expect(task.reload).to be_completed
+    end
+  end
 
-    expect(page).to_not have_css "label#task_#{task.id}.completed"
-    expect(task.reload).to_not be_completed
+  def expect_incomplete_task(name)
+    aggregate_failures do
+      expect(page).to_not have_css "label.completed", text: name
+      expect(task.reload).to_not be_completed
+    end
   end
 end
