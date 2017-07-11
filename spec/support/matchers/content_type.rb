@@ -8,11 +8,15 @@ RSpec::Matchers.define :have_content_type do |expected|
   end
 
   failure_message do |actual|
-    %Q(Expected "#{content_type(actual.content_type)} (#{actual.content_type})" to be Content Type "#{content_type(expected)}" (#{expected}))
+    "Expected \"#{content_type(actual.content_type)} " +
+    "(#{actual.content_type})\" to be Content Type " +
+    "\"#{content_type(expected)}\" (#{expected})"
   end
 
   failure_message_when_negated do |actual|
-    %Q(Expected "#{content_type(actual.content_type)} (#{actual.content_type})" to not be Content Type "#{content_type(expected)}" (#{expected}))
+    "Expected \"#{content_type(actual.content_type)} " +
+    "(#{actual.content_type})\" to not be Content Type " +
+    "\"#{content_type(expected)}\" (#{expected})"
   end
 
   def content_type(type)
