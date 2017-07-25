@@ -23,6 +23,9 @@ group :development, :test do
   # Or use poltergeist and PhantomJS as an alternative to Selenium/Chrome
   # gem 'poltergeist', '~> 1.15.0'
   gem 'launchy', '~> 2.4.3'
+  gem 'shoulda-matchers',
+    git: 'https://github.com/thoughtbot/shoulda-matchers.git',
+    branch: 'rails-5'
 end
 
 group :development do
