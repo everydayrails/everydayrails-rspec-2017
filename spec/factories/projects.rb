@@ -14,7 +14,7 @@ FactoryGirl.define do
     end
 
     trait :due_today do
-      due_on Date.today
+      due_on Date.current.in_time_zone
     end
 
     trait :due_tomorrow do
@@ -28,7 +28,7 @@ FactoryGirl.define do
     # end
     #
     # factory :project_due_today do
-    #   due_on Date.today
+    #   due_on Date.current.in_time_zone
     # end
     #
     # factory :project_due_tomorrow do
