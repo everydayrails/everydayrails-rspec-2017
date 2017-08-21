@@ -6,6 +6,6 @@ class Project < ApplicationRecord
   has_many :tasks
 
   def late?
-    due_on < Date.today
+    due_on.in_time_zone < Date.current.in_time_zone
   end
 end
