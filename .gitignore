@@ -24,5 +24,6 @@
 
 # Ignore uploads from Paperclip
 /public/system
+/spec/test_uploads
 
 .ruby-version

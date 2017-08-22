@@ -60,6 +60,11 @@ RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include RequestSpecHelper, type: :request
   config.include Warden::Test::Helpers
+
+  # Clean up file uploads when test suite is finished
+  config.after(:suite) do
+    FileUtils.rm_rf(Dir["#{Rails.root}/spec/test_uploads/"])
+  end
 end
 
 Shoulda::Matchers.configure do |config|
