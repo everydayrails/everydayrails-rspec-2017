@@ -19,6 +19,8 @@ RSpec.describe Note, type: :model do
     expect(note.errors[:message]).to include("can't be blank")
   end
 
+  it { is_expected.to have_attached_file(:attachment) }
+
   describe "search message for a term" do
     let!(:note1) {
       FactoryGirl.create(:note,
