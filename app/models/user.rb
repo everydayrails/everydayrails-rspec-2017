@@ -28,6 +28,10 @@ class User < ApplicationRecord
     ["localhost", "127.0.0.1", "0.0.0.0"].include? last_sign_in_ip
   end
 
+  def after_database_authentication
+    GeocodeUserJob.perform_later self
+  end
+
   private
 
   def ensure_authentication_token
