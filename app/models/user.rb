@@ -48,6 +48,6 @@ class User < ApplicationRecord
   end
 
   def send_welcome_email
-    UserMailer.welcome_email(self).deliver
+    UserMailer.welcome_email(self).deliver_later
   end
 end
