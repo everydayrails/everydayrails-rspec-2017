@@ -32,7 +32,7 @@ RSpec.describe User, type: :model do
     expect(UserMailer).to have_received(:welcome_email).with(user)
   end
 
-  it "performs geocoding" do
+  it "performs geocoding", vcr: true do
     user = FactoryGirl.create(:user, last_sign_in_ip: "161.185.207.20")
     expect {
       user.geocode
