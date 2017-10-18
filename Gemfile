@@ -18,7 +18,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.6.0'
   gem 'factory_girl_rails', '~> 4.8.0'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capybara', '~> 2.14.0'
+  gem 'capybara', '~> 2.15.4'
   gem 'selenium-webdriver'
   # Or use poltergeist and PhantomJS as an alternative to Selenium/Chrome
   # gem 'poltergeist', '~> 1.15.0'
