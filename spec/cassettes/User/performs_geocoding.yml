@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://freegeoip.io/json/161.185.207.20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.11.8
+      Date:
+      - Thu, 07 Sep 2017 22:24:35 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '244'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin
+      X-Database-Date:
+      - Thu, 07 Sep 2017 09:08:50 GMT
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"ip":"161.185.207.20","country_code":"US","country_name":"United States","region_code":"NY","region_name":"New
+        York","city":"Brooklyn","zip_code":"11201","time_zone":"America/New_York","latitude":40.6944,"longitude":-73.9906,"metro_code":501}
+
+'
+    http_version: 
+  recorded_at: Thu, 07 Sep 2017 22:24:42 GMT
+recorded_with: VCR 3.0.3

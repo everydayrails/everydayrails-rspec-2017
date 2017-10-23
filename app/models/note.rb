@@ -4,8 +4,10 @@ class Note < ApplicationRecord
 
   delegate :name, to: :user, prefix: true
 
+  validates :message, presence: true
+
   scope :search, ->(term) {
-    where("message LIKE ?", "%#{term}%")
+    where("LOWER(message) LIKE ?", "%#{term.downcase}%")
   }
 
   has_attached_file :attachment

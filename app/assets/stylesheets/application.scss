@@ -1,6 +1,57 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.task-actions {
+  text-align: right;
+}
+
 .completed {
   text-decoration: line-through;
 }
+
+.task {
+  label {
+    font-weight: normal;
+  }
+}
+
+.btn-inline {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.heading {
+  font-weight: normal;
+}
+
+.project-description {
+  font-size: 20px;
+}
+
+.note {
+  margin: 20px 0 30px;
+}
+
+.note-info, .note-details {
+  font-weight: normal;
+  font-size: 14px;
+  color: #666;
+}
+
+.divider {
+  margin: 40px 0;
+}
+
+.note-message {
+  font-size: 20px;
+}
+

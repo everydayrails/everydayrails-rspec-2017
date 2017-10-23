@@ -13,16 +13,16 @@
 
   <div class="form-group">
     <%= f.label :message %>
-    <%= f.text_area :message, class: "form-control" %>
+    <%= f.text_area :message, class: "form-control", id: :note_message %>
   </div>
 
   <div class="form-group">
     <%= f.label :attachment %>
-    <%= f.file_field :attachment, class: "form-control" %>
+    <%= f.file_field :attachment, class: "form-control", id: :note_attachment %>
   </div>
 
   <div class="actions">
     <%= f.submit class: "btn btn-primary" %>
-    <%= link_to "Cancel", note.project, class: "btn btn-danger", data: { confirm: "Are you sure?" } %>
+    <%= link_to "Cancel", note.project, class: "btn btn-default", data: { confirm: "Are you sure?" } %>
   </div>
 <% end %>

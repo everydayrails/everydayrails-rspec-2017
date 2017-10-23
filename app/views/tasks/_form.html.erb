@@ -13,16 +13,16 @@
 
   <div class="form-group">
     <%= f.label :name %>
-    <%= f.text_field :name, class: "form-control" %>
+    <%= f.text_field :name, class: "form-control", id: :task_name %>
   </div>
 
   <div class="form-group">
-    <%= f.check_box :completed %>
+    <%= f.check_box :completed, id: :task_completed %>
     <%= f.label :completed %>
   </div>
 
   <div class="actions">
     <%= f.submit class: "btn btn-primary" %>
-    <%= link_to "Cancel", task.project, class: "btn btn-danger", data: { confirm: "Are you sure?" } %>
+    <%= link_to "Cancel", task.project, class: "btn btn-default", data: { confirm: "Are you sure?" } %>
   </div>
 <% end %>

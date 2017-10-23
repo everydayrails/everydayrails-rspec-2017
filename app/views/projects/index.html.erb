@@ -1,6 +1,12 @@
-<h1>Projects</h1>
+<h1>
+  Projects
 
-<%= link_to 'New Project', new_project_path, class: "btn btn-primary" %>
+  <%= link_to new_project_path, class: "btn btn-primary" do %>
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    New Project
+  <% end %>
+</h1>
+
 
 <% @projects.each do |project| %>
   <h2><%= link_to project.name, project %></h2>
