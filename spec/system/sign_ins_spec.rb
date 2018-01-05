@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Sign in", type: :feature do
+RSpec.feature "Sign in", type: :system do
   let(:user) { FactoryGirl.create(:user) }
 
   before do

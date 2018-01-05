@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Tasks", type: :feature do
+RSpec.feature "Tasks", type: :system do
   let(:user) { FactoryGirl.create(:user) }
   let(:project) {
     FactoryGirl.create(:project,
