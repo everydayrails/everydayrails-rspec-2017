@@ -7,7 +7,7 @@ RSpec.describe "Sign in", type: :system do
     ActiveJob::Base.queue_adapter = :test
   end
 
-  scenario "user signs in" do
+  it "user signs in" do
     visit root_path
     click_link "Sign In"
     fill_in "Email", with: user.email

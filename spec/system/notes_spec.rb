@@ -8,7 +8,7 @@ RSpec.describe "Notes", type: :system do
       owner: user)
   }
 
-  scenario "user uploads an attachment" do
+  it "user uploads an attachment" do
     login_as user, scope: :user
     visit project_path(project)
     click_link "Add Note"

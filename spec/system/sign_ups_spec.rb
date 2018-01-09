@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "Sign-ups", type: :system do
   include ActiveJob::TestHelper
 
-  scenario "user successfully signs up" do
+  it "user successfully signs up" do
     visit root_path
     click_link "Sign up"
 

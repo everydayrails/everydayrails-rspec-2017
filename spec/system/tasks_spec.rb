@@ -9,7 +9,7 @@ RSpec.describe "Tasks", type: :system do
   }
   let!(:task) { project.tasks.create!(name: "Finish RSpec tutorial") }
 
-  scenario "user toggles a task", js: true do
+  it "user toggles a task", js: true do
     login_as user, scope: :user
     go_to_project "RSpec tutorial"
 

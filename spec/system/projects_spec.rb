@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Projects", type: :system do
-  scenario "user creates a new project" do
+  it "user creates a new project" do
     user = FactoryGirl.create(:user)
     # using our customer login helper:
     # sign_in_as user
@@ -23,7 +23,7 @@ RSpec.describe "Projects", type: :system do
     }.to change(user.projects, :count).by(1)
   end
 
-  scenario "user completes a project" do
+  it "user completes a project" do
     user = FactoryGirl.create(:user)
     project = FactoryGirl.create(:project, owner: user)
     login_as user, scope: :user
