@@ -1,5 +1,9 @@
-Capybara.javascript_driver = :selenium_chrome_headless
+RSpec.configure do |config|
+  config.before(:each, type: :system) do
+    driven_by :rack_test
+  end
 
-# Use poltergeist/PhantomJS as an alternative to Selenium and Chrome
-# require 'capybara/poltergeist'
-# Capybara.javascript_driver = :poltergeist
+  config.before(:each, type: :system, js: true) do
+    driven_by :selenium_chrome_headless
+  end
+end
