@@ -1,0 +1,19 @@
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/byebug-9.0.6/ext/byebug
+/Users/katokentaro/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20180228-27428-7ofq7e.rb extconf.rb
+creating Makefile
+
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20180228-27428-1rirafj/byebug

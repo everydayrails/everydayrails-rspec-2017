@@ -1,0 +1,19 @@
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/bcrypt-3.1.11/ext/mri
+/Users/katokentaro/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20180228-27428-1vry06i.rb extconf.rb
+creating Makefile
+
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" clean
+
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.bundle
+
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.bundle ./.gem.20180228-27428-1ly4nwg

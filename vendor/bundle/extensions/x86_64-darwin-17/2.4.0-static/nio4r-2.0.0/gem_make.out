@@ -1,0 +1,241 @@
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/nio4r-2.0.0/ext/nio4r
+/Users/katokentaro/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20180228-27428-1dl7tm.rb extconf.rb
+checking for unistd.h... yes
+checking for sys/select.h... yes
+checking for poll.h... yes
+checking for sys/epoll.h... no
+checking for sys/event.h... yes
+checking for sys/queue.h... yes
+checking for port.h... no
+checking for sys/resource.h... yes
+creating Makefile
+
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/nio4r-2.0.0/ext/nio4r
+make "DESTDIR=" clean
+
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/nio4r-2.0.0/ext/nio4r
+make "DESTDIR="
+compiling bytebuffer.c
+compiling monitor.c
+compiling nio4r_ext.c
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:488:48: warning: '/*' within block comment [-Wcomment]
+/*#define MIN_INTERVAL  0.00000095367431640625 /* 1/2**20, good till 2200 */
+                                               ^
+./../libev/ev.c:1836:31: warning: 'extern' variable has an initializer [-Wextern-initializer]
+  EV_API_DECL struct ev_loop *ev_default_loop_ptr = 0; /* needs to be initialised to make it a definition despite extern */
+                              ^
+In file included from nio4r_ext.c:7:
+In file included from ./../libev/ev.c:2710:
+./../libev/ev_poll.c:111:18: warning: expression result unused [-Wunused-value]
+        assert (("libev: poll() returned illegal result, broken BSD kernel?", p < polls + pollcnt));
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3123:12: warning: expression result unused [-Wunused-value]
+  assert (("libev: watcher has invalid priority", ABSPRI (w) >= 0 && ABSPRI (w) < NUMPRI));
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3126:14: warning: expression result unused [-Wunused-value]
+    assert (("libev: pending watcher not on pending queue", pendings [ABSPRI (w)][w->pending - 1].w == w));
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3137:16: warning: expression result unused [-Wunused-value]
+      assert (("libev: active index mismatch in heap", ev_active (ANHE_w (heap [i])) == i));
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3138:16: warning: expression result unused [-Wunused-value]
+      assert (("libev: heap condition violated", i == HEAP0 || ANHE_at (heap [HPARENT (i)]) <= ANHE_at (heap [i])));
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3139:16: warning: expression result unused [-Wunused-value]
+      assert (("libev: heap at cache mismatch", ANHE_at (heap [i]) == ev_at (ANHE_w (heap [i]))));
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3151:16: warning: expression result unused [-Wunused-value]
+      assert (("libev: active index mismatch", ev_active (ws [cnt]) == cnt + 1));
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3169:14: warning: expression result unused [-Wunused-value]
+    assert (("libev: negative fd in fdchanges", fdchanges [i] >= 0));
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3182:24: warning: expression result unused [-Wunused-value]
+              assert (("libev: io watcher list contains a loop", w != w2));
+                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3186:20: warning: expression result unused [-Wunused-value]
+          assert (("libev: inactive fd watcher on anfd list", ev_active (w) == 1));
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3187:20: warning: expression result unused [-Wunused-value]
+          assert (("libev: fd mismatch between watcher and anfd", ((ev_io *)w)->fd == i));
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3371:24: warning: expression result unused [-Wunused-value]
+              assert (("libev: negative ev_timer repeat value found while processing timers", w->repeat > 0.));
+                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3434:24: warning: expression result unused [-Wunused-value]
+              assert (("libev: ev_periodic reschedule callback returned time in the past", ev_at (w) >= ev_rt_now));
+                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3580:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+./../libev/ev.c:3594:12: warning: expression result unused [-Wunused-value]
+  assert (("libev: ev_loop recursion during release detected", loop_done != EVBREAK_RECURSE));
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3750:36: warning: incompatible pointer types passing 'VALUE (void *)' (aka 'unsigned long (void *)') to parameter of type 'void *(*)(void *)' [-Wincompatible-pointer-types]
+        rb_thread_call_without_gvl(ev_backend_poll, (void *)&poll_args, RUBY_UBF_IO, 0);
+                                   ^~~~~~~~~~~~~~~
+/Users/katokentaro/.rbenv/versions/2.4.1/include/ruby-2.4.0/ruby/thread.h:28:42: note: passing argument to parameter 'func' here
+void *rb_thread_call_without_gvl(void *(*func)(void *), void *data1,
+                                         ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3762:22: warning: expression result unused [-Wunused-value]
+            assert (("libev: pipe_w not active, but pipe not written", ev_is_active (&pipe_w)));
+                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3937:12: warning: expression result unused [-Wunused-value]
+  assert (("libev: ev_io_start called with negative fd", fd >= 0));
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3938:12: warning: expression result unused [-Wunused-value]
+  assert (("libev: ev_io_start called with illegal event mask", !(w->events & ~(EV__IOFDSET | EV_READ | EV_WRITE))));
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3947:12: warning: expression result unused [-Wunused-value]
+  assert (("libev: ev_io_start called with corrupted watcher", ((WL)w)->next != (WL)w));
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3949:34: warning: '&' within '|' [-Wbitwise-op-parentheses]
+  fd_change (EV_A_ fd, w->events & EV__IOFDSET | EV_ANFD_REIFY);
+                       ~~~~~~~~~~^~~~~~~~~~~~~ ~
+./../libev/ev.c:3949:34: note: place parentheses around the '&' expression to silence this warning
+  fd_change (EV_A_ fd, w->events & EV__IOFDSET | EV_ANFD_REIFY);
+                                 ^
+                       (                      )
+./../libev/ev.c:3963:12: warning: expression result unused [-Wunused-value]
+  assert (("libev: ev_io_stop called with illegal fd (must stay constant after start!)", w->fd >= 0 && w->fd < anfdmax));
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:3984:12: warning: expression result unused [-Wunused-value]
+  assert (("libev: ev_timer_start called with negative timer repeat value", w->repeat >= 0.));
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:4013:14: warning: expression result unused [-Wunused-value]
+    assert (("libev: internal timer heap corruption", ANHE_w (timers [active]) == (WT)w));
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:4077:16: warning: expression result unused [-Wunused-value]
+      assert (("libev: ev_periodic_start called with negative interval value", w->interval >= 0.));
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:4110:14: warning: expression result unused [-Wunused-value]
+    assert (("libev: internal periodic heap corruption", ANHE_w (periodics [active]) == (WT)w));
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:4149:12: warning: expression result unused [-Wunused-value]
+  assert (("libev: ev_signal_start called with illegal signal number", w->signum > 0 && w->signum < EV_NSIG));
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:4152:12: warning: expression result unused [-Wunused-value]
+  assert (("libev: a signal must not be attached to two different loops",
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:4271:12: warning: expression result unused [-Wunused-value]
+  assert (("libev: child watchers are only supported in the default loop", loop == ev_default_loop_ptr));
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+In file included from nio4r_ext.c:7:
+./../libev/ev.c:4856:14: warning: expression result unused [-Wunused-value]
+    assert (("libev: loop to be embedded is not embeddable", backend & ev_embeddable_backends ()));
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+32 warnings generated.
+compiling selector.c
+linking shared-object nio4r_ext.bundle
+
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/nio4r-2.0.0/ext/nio4r
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20180228-27428-1csqyzy

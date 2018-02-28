@@ -1,0 +1,21 @@
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/puma-3.8.2/ext/puma_http11
+/Users/katokentaro/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20180228-27428-1md6me6.rb extconf.rb
+checking for BIO_read() in -lcrypto... yes
+checking for SSL_CTX_new() in -lssl... yes
+checking for openssl/bio.h... yes
+creating Makefile
+
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/puma-3.8.2/ext/puma_http11
+make "DESTDIR=" clean
+
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/puma-3.8.2/ext/puma_http11
+make "DESTDIR="
+compiling http11_parser.c
+compiling io_buffer.c
+compiling mini_ssl.c
+compiling puma_http11.c
+linking shared-object puma/puma_http11.bundle
+
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/puma-3.8.2/ext/puma_http11
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20180228-27428-1kencxu/puma

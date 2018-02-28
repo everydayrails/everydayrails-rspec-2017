@@ -1,0 +1,15 @@
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+/Users/katokentaro/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20180228-27428-pmmvdn.rb extconf.rb
+creating Makefile
+
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.bundle
+
+current directory: /Users/katokentaro/code/everydayrails-rspec-2017/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20180228-27428-7bcmu/bindex
