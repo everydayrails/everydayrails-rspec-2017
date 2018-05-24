@@ -6,7 +6,7 @@ RSpec.feature "Projects", type: :feature do
     # using our customer login helper:
     # sign_in_as user
     # or the one provided by Devise:
-    login_as user, scope: :user
+    sign_in user, scope: :user
     visit root_path
 
     expect {
