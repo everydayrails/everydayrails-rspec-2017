@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/thoughtbot/shoulda-matchers.git
-  revision: 0b2e0da6035b9c45b0430bc6eb9a8bab4aeba50e
+  revision: 4b160bd19ecca7f97d7ac22dccd5fde9b0da5a9f
   branch: rails-5
   specs:
     shoulda-matchers (3.1.2)
@@ -101,7 +101,8 @@ GEM
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     hashdiff (0.3.4)
-    i18n (0.8.1)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
     jbuilder (2.6.3)
       activesupport (>= 3.0.0, < 5.2)
       multi_json (~> 1.2)
@@ -126,7 +127,7 @@ GEM
     mimemagic (0.3.2)
     mini_mime (0.1.4)
     mini_portile2 (2.3.0)
-    minitest (5.10.2)
+    minitest (5.11.3)
     multi_json (1.12.1)
     nio4r (2.0.0)
     nokogiri (1.8.1)
@@ -224,7 +225,7 @@ GEM
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
-    tzinfo (1.2.3)
+    tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
