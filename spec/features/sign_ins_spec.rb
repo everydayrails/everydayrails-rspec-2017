@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "Sign in", type: :feature do
-  let(:user) { FactoryGirl.create(:user) }
+  let(:user) { FactoryBot.create(:user) }
 
   before do
     ActiveJob::Base.queue_adapter = :test

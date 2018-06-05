@@ -28,12 +28,12 @@ RSpec.describe User, type: :model do
   it "sends a welcome email on account creation" do
     allow(UserMailer).to \
       receive_message_chain(:welcome_email, :deliver_later)
-    user = FactoryGirl.create(:user)
+    user = FactoryBot.create(:user)
     expect(UserMailer).to have_received(:welcome_email).with(user)
   end
 
   it "performs geocoding", vcr: true do
-    user = FactoryGirl.create(:user, last_sign_in_ip: "161.185.207.20")
+    user = FactoryBot.create(:user, last_sign_in_ip: "161.185.207.20")
     expect {
       user.geocode
     }.to change(user, :location).

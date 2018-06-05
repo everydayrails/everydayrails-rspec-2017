@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.feature "Notes", type: :feature do
-  let(:user) { FactoryGirl.create(:user) }
+  let(:user) { FactoryBot.create(:user) }
   let(:project) {
-    FactoryGirl.create(:project,
+    FactoryBot.create(:project,
       name: "RSpec tutorial",
       owner: user)
   }
