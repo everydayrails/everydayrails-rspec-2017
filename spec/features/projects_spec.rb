@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "Projects", type: :feature do
   scenario "user creates a new project" do
-    user = FactoryGirl.create(:user)
+    user = FactoryBot.create(:user)
     # using our customer login helper:
     # sign_in_as user
     # or the one provided by Devise:
