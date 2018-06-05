@@ -222,7 +222,7 @@ RSpec.describe ProjectsController, type: :controller do
 
   describe "#complete" do
     context "as an authenticated user" do
-      let!(:project) { FactoryGirl.create(:project, completed: nil) }
+      let!(:project) { FactoryBot.create(:project, completed: nil) }
 
       before do
         sign_in project.owner
