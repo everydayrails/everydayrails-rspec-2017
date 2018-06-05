@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "Projects", type: :feature do
   scenario "user creates a new project" do
-    user = FactoryGirl.create(:user)
+    user = FactoryBot.create(:user)
 
     visit root_path
     click_link "Sign in"
