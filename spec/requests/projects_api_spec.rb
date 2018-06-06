@@ -2,9 +2,9 @@ require 'rails_helper'
 
 describe 'Projects API', type: :request do
   it 'loads a project' do
-    user = FactoryGirl.create(:user)
-    FactoryGirl.create(:project, name: "Sample Project")
-    FactoryGirl.create(:project, name: "Second Sample Project", owner: user)
+    user = FactoryBot.create(:user)
+    FactoryBot.create(:project, name: "Sample Project")
+    FactoryBot.create(:project, name: "Second Sample Project", owner: user)
 
     get api_projects_path, params: {
       user_email: user.email,
@@ -28,11 +28,11 @@ describe 'Projects API', type: :request do
   end
 
   it 'creates a project' do
-    user = FactoryGirl.create(:user)
-    FactoryGirl.create(:project, name: "Sample Project")
-    FactoryGirl.create(:project, name: "Second Sample Project", owner: user)
+    user = FactoryBot.create(:user)
+    FactoryBot.create(:project, name: "Sample Project")
+    FactoryBot.create(:project, name: "Second Sample Project", owner: user)
 
-    project_attributes = FactoryGirl.attributes_for(:project)
+    project_attributes = FactoryBot.attributes_for(:project)
 
     expect {
       post api_projects_path, params: {

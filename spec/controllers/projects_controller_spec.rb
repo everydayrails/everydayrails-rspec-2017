@@ -4,7 +4,7 @@ RSpec.describe ProjectsController, type: :controller do
   describe "#index" do
     context "as an authenticated user" do
       before do
-        @user = FactoryGirl.create(:user)
+        @user = FactoryBot.create(:user)
       end
 
       it "responds successfully" do
@@ -33,8 +33,8 @@ RSpec.describe ProjectsController, type: :controller do
   describe "#show" do
     context "as an authorized user" do
       before do
-        @user = FactoryGirl.create(:user)
-        @project = FactoryGirl.create(:project, owner: @user)
+        @user = FactoryBot.create(:user)
+        @project = FactoryBot.create(:project, owner: @user)
       end
 
       it "responds successfully" do
@@ -46,9 +46,9 @@ RSpec.describe ProjectsController, type: :controller do
 
     context "as an unauthorized user" do
       before do
-        @user = FactoryGirl.create(:user)
-        other_user = FactoryGirl.create(:user)
-        @project = FactoryGirl.create(:project, owner: other_user)
+        @user = FactoryBot.create(:user)
+        other_user = FactoryBot.create(:user)
+        @project = FactoryBot.create(:project, owner: other_user)
       end
 
       it "redirects to the dashboard" do
@@ -62,12 +62,12 @@ RSpec.describe ProjectsController, type: :controller do
   describe "#create" do
     context "as an authenticated user" do
       before do
-        @user = FactoryGirl.create(:user)
+        @user = FactoryBot.create(:user)
       end
 
       context "with valid attributes" do
         it "adds a project" do
-          project_params = FactoryGirl.attributes_for(:project)
+          project_params = FactoryBot.attributes_for(:project)
           sign_in @user
           expect {
             post :create, params: { project: project_params }
@@ -77,7 +77,7 @@ RSpec.describe ProjectsController, type: :controller do
 
       context "with invalid attributes" do
         it "does not add a project" do
-          project_params = FactoryGirl.attributes_for(:project, :invalid)
+          project_params = FactoryBot.attributes_for(:project, :invalid)
           sign_in @user
           expect {
             post :create, params: { project: project_params }
@@ -88,13 +88,13 @@ RSpec.describe ProjectsController, type: :controller do
 
     context "as a guest" do
       it "returns a 302 response" do
-        project_params = FactoryGirl.attributes_for(:project)
+        project_params = FactoryBot.attributes_for(:project)
         post :create, params: { project: project_params }
         expect(response).to have_http_status "302"
       end
 
       it "redirects to the sign-in page" do
-        project_params = FactoryGirl.attributes_for(:project)
+        project_params = FactoryBot.attributes_for(:project)
         post :create, params: { project: project_params }
         expect(response).to redirect_to "/users/sign_in"
       end
@@ -104,12 +104,12 @@ RSpec.describe ProjectsController, type: :controller do
   describe "#update" do
     context "as an authorized user" do
       before do
-        @user = FactoryGirl.create(:user)
-        @project = FactoryGirl.create(:project, owner: @user)
+        @user = FactoryBot.create(:user)
+        @project = FactoryBot.create(:project, owner: @user)
       end
 
       it "updates a project" do
-        project_params = FactoryGirl.attributes_for(:project,
+        project_params = FactoryBot.attributes_for(:project,
           name: "New Project Name")
         sign_in @user
         patch :update, params: { id: @project.id, project: project_params }
@@ -119,15 +119,15 @@ RSpec.describe ProjectsController, type: :controller do
 
     context "as an unauthorized user" do
       before do
-        @user = FactoryGirl.create(:user)
-        other_user = FactoryGirl.create(:user)
-        @project = FactoryGirl.create(:project,
+        @user = FactoryBot.create(:user)
+        other_user = FactoryBot.create(:user)
+        @project = FactoryBot.create(:project,
           owner: other_user,
           name: "Same Old Name")
       end
 
       it "does not update the project" do
-        project_params = FactoryGirl.attributes_for(:project,
+        project_params = FactoryBot.attributes_for(:project,
           name: "New Name")
         sign_in @user
         patch :update, params: { id: @project.id, project: project_params }
@@ -135,7 +135,7 @@ RSpec.describe ProjectsController, type: :controller do
       end
 
       it "redirects to the dashboard" do
-        project_params = FactoryGirl.attributes_for(:project)
+        project_params = FactoryBot.attributes_for(:project)
         sign_in @user
         patch :update, params: { id: @project.id, project: project_params }
         expect(response).to redirect_to root_path
@@ -144,17 +144,17 @@ RSpec.describe ProjectsController, type: :controller do
 
     context "as a guest" do
       before do
-        @project = FactoryGirl.create(:project)
+        @project = FactoryBot.create(:project)
       end
 
       it "returns a 302 response" do
-        project_params = FactoryGirl.attributes_for(:project)
+        project_params = FactoryBot.attributes_for(:project)
         patch :update, params: { id: @project.id, project: project_params }
         expect(response).to have_http_status "302"
       end
 
       it "redirects to the sign-in page" do
-        project_params = FactoryGirl.attributes_for(:project)
+        project_params = FactoryBot.attributes_for(:project)
         patch :update, params: { id: @project.id, project: project_params }
         expect(response).to redirect_to "/users/sign_in"
       end
@@ -164,8 +164,8 @@ RSpec.describe ProjectsController, type: :controller do
   describe "#destroy" do
     context "as an authorized user" do
       before do
-        @user = FactoryGirl.create(:user)
-        @project = FactoryGirl.create(:project, owner: @user)
+        @user = FactoryBot.create(:user)
+        @project = FactoryBot.create(:project, owner: @user)
       end
 
       it "deletes a project" do
@@ -178,9 +178,9 @@ RSpec.describe ProjectsController, type: :controller do
 
     context "as an unauthorized user" do
       before do
-        @user = FactoryGirl.create(:user)
-        other_user = FactoryGirl.create(:user)
-        @project = FactoryGirl.create(:project, owner: other_user)
+        @user = FactoryBot.create(:user)
+        other_user = FactoryBot.create(:user)
+        @project = FactoryBot.create(:project, owner: other_user)
       end
 
       it "does not delete the project" do
@@ -199,7 +199,7 @@ RSpec.describe ProjectsController, type: :controller do
 
     context "as a guest" do
       before do
-        @project = FactoryGirl.create(:project)
+        @project = FactoryBot.create(:project)
       end
 
       it "returns a 302 response" do
@@ -222,7 +222,7 @@ RSpec.describe ProjectsController, type: :controller do
 
   describe "#complete" do
     context "as an authenticated user" do
-      let!(:project) { FactoryGirl.create(:project, completed: nil) }
+      let!(:project) { FactoryBot.create(:project, completed: nil) }
 
       before do
         sign_in project.owner

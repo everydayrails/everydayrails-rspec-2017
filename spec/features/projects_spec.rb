@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "Projects", type: :feature do
   scenario "user creates a new project" do
-    user = FactoryGirl.create(:user)
+    user = FactoryBot.create(:user)
     # using our customer login helper:
     # sign_in_as user
     # or the one provided by Devise:
@@ -24,8 +24,8 @@ RSpec.feature "Projects", type: :feature do
   end
 
   scenario "user completes a project" do
-    user = FactoryGirl.create(:user)
-    project = FactoryGirl.create(:project, owner: user)
+    user = FactoryBot.create(:user)
+    project = FactoryBot.create(:project, owner: user)
     login_as user, scope: :user
 
     visit project_path(project)
