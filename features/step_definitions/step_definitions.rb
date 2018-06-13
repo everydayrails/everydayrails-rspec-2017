@@ -2,6 +2,11 @@ Given("I am a new user") do
   visit root_path
 end
 
+Given("I am already registered with the email {string}") do |string|
+  FactoryBot.create(:user, email: string)
+  visit root_path
+end
+
 When("I sign up as {word} {word} with email {string} and password {string}") do |first_name, last_name, email, password|
   click_link "Sign up"
   fill_in "First name", with: first_name
@@ -28,4 +33,8 @@ end
 
 Then("I am asked to fix the mismatched password") do
   expect(page).to have_content "Password confirmation doesn't match Password"
+end
+
+Then("I am told the email is already in use") do
+  expect(page).to have_content "Email has already been taken"
 end
