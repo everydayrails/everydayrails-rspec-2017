@@ -108,6 +108,7 @@ GEM
       railties (>= 4, < 6)
     cucumber-tag_expressions (1.1.1)
     cucumber-wire (0.0.1)
+    database_cleaner (1.7.0)
     devise (4.3.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -288,6 +289,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   cucumber-rails
+  database_cleaner
   devise
   factory_bot_rails (~> 4.10.0)
   faker
