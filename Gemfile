@@ -41,6 +41,7 @@ group :test do
     branch: 'rails-5'
   gem 'vcr'
   gem 'webmock'
+  gem 'cucumber-rails', require: false
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
