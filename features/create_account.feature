@@ -3,8 +3,8 @@ Feature: Create account
 
   Scenario: User needs an account
     Given I am a new user
-    When I register for an account
-    Then I am a registered user
+    When I sign up as Aaron Sumner with email "test@example.com" and password "secret123!"
+    Then I am registered as Aaron Sumner
 
   Scenario: Password and password confirmation don't match
     Given I am a new user
