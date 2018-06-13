@@ -1,11 +1,19 @@
 Given("I am a new user") do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit root_path
 end
 
 When("I register for an account") do
-  pending # Write code here that turns the phrase above into concrete actions
+  click_link "Sign up"
+  fill_in "First name", with: "Test"
+  fill_in "Last name", with: "User"
+  fill_in "Email", with: "testuser@example.com"
+  fill_in "Password", with: "secret123!"
+  fill_in "Password confirmation", with: "secret123!"
+  click_button "Sign up"
 end
 
 Then("I am a registered user") do
-  pending # Write code here that turns the phrase above into concrete actions
+   expect(page).to have_content "Welcome! You have signed up successfully."
+   expect(page).to have_link "Test User", href: edit_user_registration_path
+   expect(page).to have_link "Sign Out", href: destroy_user_session_path
 end
