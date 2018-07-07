@@ -5,6 +5,7 @@ Feature: Create account
     Given I am a new user
     When I sign up as Aaron Sumner with email "test@example.com" and password "secret123!"
     Then I am registered as Aaron Sumner
+    And I can sign in with email "test@example.com" and password "secret123!"
 
   Scenario: Password and password confirmation don't match
     Given I am a new user

@@ -31,6 +31,15 @@ Then("I am registered as {word} {word}") do |first_name, last_name|
   expect(page).to have_link "Sign Out", href: destroy_user_session_path
 end
 
+Then("I can sign in with email {string} and password {string}") do |email, password|
+  click_link "Sign Out"
+  click_link "Sign in"
+  fill_in "Email", with: email
+  fill_in "Password", with: password
+  click_button "Log in"
+  expect(page).to have_content "Signed in successfully."
+end
+
 Then("I am asked to fix the mismatched password") do
   expect(page).to have_content "Password confirmation doesn't match Password"
 end
