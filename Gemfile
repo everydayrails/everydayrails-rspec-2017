@@ -19,6 +19,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13.0'
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.6.0'
+  gem 'spring-commands-rspec', '~> 1.0', '>= 1.0.4'
 end
 
 group :development do
