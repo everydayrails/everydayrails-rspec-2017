@@ -27,7 +27,7 @@ RSpec.feature "Projects", type: :feature do
   scenario "user completes a project" do
     user = FactoryBot.create(:user)
     project = FactoryBot.create(:project, owner: user)
-    login_as user, scope: :user
+    sign_in user
 
     visit project_path(project)
 
