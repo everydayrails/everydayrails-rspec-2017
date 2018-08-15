@@ -9,7 +9,7 @@ RSpec.feature "Notes", type: :feature do
   }
 
   scenario "user uploads an attachment" do
-    login_as user, scope: :user
+    sign_in user
     visit project_path(project)
     click_link "Add Note"
     fill_in "Message", with: "My book cover"
