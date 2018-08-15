@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Projects", type: :feature do
+RSpec.describe "Projects", type: :system do
   scenario "user creates a new project" do
     user = FactoryBot.create(:user)
     # using our customer login helper:

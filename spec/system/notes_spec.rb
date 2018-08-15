@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Notes", type: :feature do
+RSpec.describe "Notes", type: :system do
   let(:user) { FactoryBot.create(:user) }
   let(:project) {
     FactoryBot.create(:project,

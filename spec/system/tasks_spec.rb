@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Tasks", type: :feature do
+RSpec.describe "Tasks", type: :system do
   let(:user) { FactoryBot.create(:user) }
   let(:project) {
     FactoryBot.create(:project,
