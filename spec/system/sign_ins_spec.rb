@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Sign in", type: :feature do
+RSpec.describe "Sign in", type: :system do
   let(:user) { FactoryBot.create(:user) }
 
   before do

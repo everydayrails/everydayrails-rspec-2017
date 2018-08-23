@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Sign-ups", type: :feature do
+RSpec.describe "Sign-ups", type: :system do
   include ActiveJob::TestHelper
 
   scenario "user successfully signs up" do

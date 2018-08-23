@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://freegeoip.io/json/161.185.207.20
+    uri: http://ipinfo.io/161.185.207.20/geo
     body:
       encoding: US-ASCII
       string: ''
@@ -18,28 +18,35 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.11.8
       Date:
-      - Thu, 07 Sep 2017 22:24:35 GMT
+      - Wed, 11 Jul 2018 04:46:59 GMT
       Content-Type:
-      - application/json
-      Content-Length:
-      - '244'
-      Connection:
-      - keep-alive
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
       Vary:
-      - Origin
-      X-Database-Date:
-      - Thu, 07 Sep 2017 09:08:50 GMT
-      Strict-Transport-Security:
-      - max-age=31536000
+      - Accept-Encoding
+      X-Powered-By:
+      - Express
+      X-Cloud-Trace-Context:
+      - 72c73f8f3c50820effc90c4aabb84d58/8793541516014538142;o=0
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 google
     body:
-      encoding: UTF-8
-      string: '{"ip":"161.185.207.20","country_code":"US","country_name":"United States","region_code":"NY","region_name":"New
-        York","city":"Brooklyn","zip_code":"11201","time_zone":"America/New_York","latitude":40.6944,"longitude":-73.9906,"metro_code":501}
-
-'
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "ip": "161.185.207.20",
+          "city": "Brooklyn",
+          "region": "New York",
+          "country": "US",
+          "loc": "40.6944,-73.9906",
+          "postal": "11201"
+        }
     http_version: 
-  recorded_at: Thu, 07 Sep 2017 22:24:42 GMT
+  recorded_at: Wed, 11 Jul 2018 04:46:59 GMT
 recorded_with: VCR 3.0.3
