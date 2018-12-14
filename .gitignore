@@ -27,3 +27,9 @@
 /spec/test_uploads
 
 .ruby-version
+
+# JetBrain
+.idea
+
+## OSX
+.DS_Store
