@@ -59,7 +59,7 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     builder (3.2.3)
-    byebug (9.0.6)
+    byebug (10.0.2)
     capybara (2.15.4)
       addressable
       mini_mime (>= 0.1.3)
@@ -86,6 +86,9 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
+    debase (0.2.2)
+      debase-ruby_core_source (>= 0.10.2)
+    debase-ruby_core_source (0.10.3)
     devise (4.4.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -200,6 +203,8 @@ GEM
       rspec-mocks (~> 3.8.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
+    ruby-debug-ide (0.7.0.beta6)
+      rake (>= 0.8.1)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
     safe_yaml (1.0.4)
@@ -264,6 +269,7 @@ DEPENDENCIES
   capybara (~> 2.15.4)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  debase
   devise
   factory_bot_rails (~> 4.10.0)
   faker
@@ -277,6 +283,7 @@ DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.6)
   rspec-rails (~> 3.8.0)
+  ruby-debug-ide
   sass-rails (~> 5.0)
   selenium-webdriver
   shoulda-matchers!
