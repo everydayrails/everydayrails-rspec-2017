@@ -14,12 +14,15 @@ services:
     tty: true
     volumes:
       - .:/rspec_app
-      - /rspec_app/node_modules
+      - node-modules:/rspec_app/node_modules
+      - bundle:/usr/local/bundle
   mysql:
     image: mysql:5.7.24
     container_name: mysql
     environment:
-      MYSQL_USER: root
       MYSQL_ROOT_PASSWORD: password
     volumes:
       - ./tmp/db:/var/lib/mysql
+volumes:
+  node-modules:
+  bundle:

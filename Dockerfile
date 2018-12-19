@@ -28,3 +28,5 @@ RUN bundle install --jobs=4
 ADD package.json $APP_ROOT
 ADD yarn.lock $APP_ROOT
 RUN yarn install --frozen-lockfile
+
+COPY . ${APP_ROOT}/
