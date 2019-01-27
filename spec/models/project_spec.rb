@@ -1,5 +1,54 @@
 require 'rails_helper'
 
+# 遅延ステータス
+describe "late status" do
+
+  # たくさんのメモが付いていること
+  it "can have many notes" do
+    # project = FactoryBot.create(:project)
+    project = FactoryBot.create(:project, :with_notes)
+    expect(project.notes.length).to eq 5
+  end
+
+  # 締切日が過ぎていれば遅延していること
+  it "is late when the due date is past today" do
+    project = FactoryBot.create(:project, :due_yesterday)
+    expect(project).to be_late
+  end
+
+  # 締切日が今日ならスケジュールどおりであること
+  it "is on time when the due date is today" do
+    project = FactoryBot.create(:project, :due_today)
+    expect(project).to_not be_late
+  end
+
+  # 締切日が未来ならスケジュールどおりであること
+  it "is on time when the due date is in the future" do
+    project = FactoryBot.create(:project, :due_tomorrow)
+    expect(project).to_not be_late
+  end
+
+=begin
+  # 締切日が過ぎていれば遅延していること
+  it "is late when the due date is past today" do
+    project = FactoryBot.create(:project_due_yesterday)
+    expect(project).to be_late
+  end
+
+  # 締切日が今日ならスケジュールどおりであること
+  it "is on time when the due date is today" do
+    project = FactoryBot.create(:project_due_today)
+    expect(project).to_not be_late
+  end
+
+  # 締切日が未来ならスケジュールどおりであること
+  it "is on time when the due date is in the future" do
+    project = FactoryBot.create(:project_due_tomorrow)
+    expect(project).to_not be_late
+  end
+=end
+end
+
 RSpec.describe Project, type: :model do
   # ユーザー単位では重複したプロジェクト名を許可しないこと
   it "does not allow duplicate project names per user" do
