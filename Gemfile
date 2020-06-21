@@ -18,6 +18,10 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13.0'
   gem 'selenium-webdriver'
+  # https://blog.jnito.com/entry/2019/10/25/053521
+  gem 'webdrivers'
+  gem 'shoulda-matchers'
+  gem 'rspec-rails', '~> 4.0.0.beta2'
 end
 
 group :development do
@@ -26,6 +30,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'faker', require: false # for sample data in development
+  gem 'spring-commands-rspec'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
