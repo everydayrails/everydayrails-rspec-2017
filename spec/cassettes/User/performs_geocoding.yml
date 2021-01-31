@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://ipinfo.io/161.185.207.20/geo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 11 Jul 2018 04:46:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-Powered-By:
+      - Express
+      X-Cloud-Trace-Context:
+      - 72c73f8f3c50820effc90c4aabb84d58/8793541516014538142;o=0
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 google
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "ip": "161.185.207.20",
+          "city": "Brooklyn",
+          "region": "New York",
+          "country": "US",
+          "loc": "40.6944,-73.9906",
+          "postal": "11201"
+        }
+    http_version: 
+  recorded_at: Wed, 11 Jul 2018 04:46:59 GMT
+recorded_with: VCR 3.0.3
