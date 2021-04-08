@@ -10,15 +10,15 @@ class Note < ApplicationRecord
     where("LOWER(message) LIKE ?", "%#{term.downcase}%")
   }
 
-  has_attached_file :attachment
+  # has_attached_file :attachment
 
-  validates_attachment :attachment,
-    content_type: {
-      content_type: [
-        "image/jpeg",
-        "image/gif",
-        "image/png",
-        "application/pdf",
-      ],
-    }
+  # validates_attachment :attachment,
+  #   content_type: {
+  #     content_type: [
+  #       "image/jpeg",
+  #       "image/gif",
+  #       "image/png",
+  #       "application/pdf",
+  #     ],
+  #   }
 end

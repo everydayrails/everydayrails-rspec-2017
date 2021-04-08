@@ -46,4 +46,28 @@ RSpec.describe Project, type: :model do
 
     expect(other_project).to be_valid
   end
+
+  describe "late status" do
+    # using factory inheritance
+    it 'is late when the due date is past today' do
+      project = FactoryBot.create(:project_due_yesterday)
+      expect(project).to be_late
+    end
+
+    it 'is on time when the due date is today' do
+      project = FactoryBot.create(:project_due_today)
+      expect(project).not_to be_late
+    end
+
+    # using traits
+    it 'is on time when the due date is today' do
+      project = FactoryBot.create(:project, :due_tomorrow)
+      expect(project).not_to be_late
+    end
+  end
+
+  it 'can have many notes' do
+    project = FactoryBot.create(:project, :with_notes)
+    expect(project.notes.length).to eq(5)
+  end
 end
