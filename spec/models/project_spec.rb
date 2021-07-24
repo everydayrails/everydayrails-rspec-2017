@@ -1,6 +1,30 @@
 require 'rails_helper'
 
 RSpec.describe Project, type: :model do
+  # たくさんのメモがついていること
+  it "can have many notes" do
+    project = FactoryBot.create(:project, :with_notes)
+    expect(project.notes.lenght).to eq 5
+  end
+  
+  #締切日が過ぎていれば遅延していること
+  it "is late when the due date is past today" do
+    project = FactoryBot.create(:project, :due_yesterday)
+    expect(project).to be_late
+  end
+  
+  # 締切日が今日ならスケジュール通りであること
+  it "is on time when the due date is today" do
+    project = FactoryBot.create(:project, :due_today)
+    expect(project).to_not be_late
+  end
+
+  # 締切日が未来ならスケジュール通りであること
+  it "is on time when the due date is today" do
+    project = FactoryBot.create(:project, :due_today)
+    expect(project).to_not be_late
+  end
+  
   it "does not allow duplicate project names per user" do
     user = User.create(
       first_name: "Joe",
